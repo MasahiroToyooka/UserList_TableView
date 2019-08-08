@@ -105,6 +105,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rzb-bv-IMu"/>
                     </view>
+                    <connections>
+                        <outlet property="hobbytextField" destination="QZ2-BQ-tMV" id="GMd-AO-jyZ"/>
+                        <outlet property="nameLabel" destination="KM0-hp-yAj" id="Tsd-Tp-mAT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WQv-iX-3qC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

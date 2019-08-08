@@ -41,11 +41,11 @@ class UserListViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellId", for: indexPath)
         cell.textLabel?.text = members[indexPath.row].name
-        selectedUser = members[indexPath.row]
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedUser = members[indexPath.row]
         performSegue(withIdentifier: "showDetail", sender: nil)
     }
     
@@ -53,6 +53,5 @@ class UserListViewController: UITableViewController {
         guard segue.identifier == "showDetail", let vc = segue.destination as? DetailViewController else { return }
         vc.user = selectedUser
     }
-
 }
 

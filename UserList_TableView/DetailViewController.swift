@@ -9,14 +9,19 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    @IBOutlet weak var hobbytextField: UITextView!
+    
     var user: UserModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         navigationItem.title = "ユーザーデータ"
-        view.backgroundColor = .red
+        
+        nameLabel.text = user?.name
+        hobbytextField.text = user?.hobby
     }
 
 }
