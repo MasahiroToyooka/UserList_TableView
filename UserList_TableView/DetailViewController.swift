@@ -10,6 +10,8 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
+    var user: UserModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
