@@ -28,29 +28,41 @@ class UserListViewController: UITableViewController {
         UserModel(name: "吉澤優衣", hobby: "ゲームが大好き。特にドラクエをこよなく愛しており、2018年の夏休みは約200時間をドラクエに費やした。他にもピアノや海外旅行や読書など様々な趣味がある。")
     ]
     
+    // UserModelのデータを格納する変数
     var selectedUser: UserModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
+    // セルの数の指定
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 14
     }
     
+    // 表示するセルの情報
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellId", for: indexPath)
+        
+        // セルのテキストにセルの順番どうりに代入
         cell.textLabel?.text = members[indexPath.row].name
         return cell
     }
     
+    // セルを選択されたときの処理
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // selectedUserにタップされた名前に対するデータを代入
         selectedUser = members[indexPath.row]
+        
+        // セグエで画面遷移
         performSegue(withIdentifier: "showDetail", sender: nil)
     }
     
+    // 遷移された時の処理
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard segue.identifier == "showDetail", let vc = segue.destination as? DetailViewController else { return }
+        
+        // 遷移先のuserにselectedUserを代入
         vc.user = selectedUser
     }
 }

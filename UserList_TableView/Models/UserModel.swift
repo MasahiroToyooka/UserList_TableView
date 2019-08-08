@@ -8,11 +8,13 @@
 
 import Foundation
 
+// 名前と趣味のデータを持つ構造体を定義
 struct UserModel {
     
     let name: String
     let hobby: String
     
+    // 名前と趣味のイニシャライザ
     init(name: String, hobby: String) {
         self.name = name
         self.hobby = hobby

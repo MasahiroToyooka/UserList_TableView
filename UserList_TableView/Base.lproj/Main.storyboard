@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--ユーザーデータ-->
+        <!--ユーザーリスト-->
         <scene sceneID="Ate-aK-P0p">
             <objects>
                 <tableViewController id="bj0-qu-7OV" customClass="UserListViewController" customModule="UserList_TableView" customModuleProvider="target" sceneMemberID="viewController">
@@ -33,7 +33,7 @@
                             <outlet property="delegate" destination="bj0-qu-7OV" id="F2H-o7-H03"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="ユーザーデータ" id="nGV-xf-2Ll"/>
+                    <navigationItem key="navigationItem" title="ユーザーリスト" id="nGV-xf-2Ll"/>
                     <connections>
                         <segue destination="FDy-d7-K13" kind="show" identifier="showDetail" id="BDB-Ki-U0h"/>
                     </connections>
@@ -42,10 +42,10 @@
             </objects>
             <point key="canvasLocation" x="700" y="-51"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--ユーザーデータ-->
         <scene sceneID="DRV-Qh-tVe">
             <objects>
-                <viewController id="FDy-d7-K13" customClass="DetailViewController" customModule="UserList_TableView" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="ユーザーデータ" id="FDy-d7-K13" customClass="DetailViewController" customModule="UserList_TableView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oqY-pY-6EF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -82,7 +82,6 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QZ2-BQ-tMV">
                                 <rect key="frame" x="10" y="268" width="394" height="584"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
