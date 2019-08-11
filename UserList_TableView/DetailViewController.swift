@@ -14,18 +14,18 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     
     // 趣味を表示するラベル
-    @IBOutlet weak var hobbytextView: UITextView!
+    @IBOutlet weak var hobbyTextView: UITextView!
     
-    // 遷移元からデータを受け取る変数
-    var user: UserModel?
+    // 遷移元からデータを受け取る辞書
+    var user = [String: String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // nameLabelに受け取ったUserModel型のデータのnameを代入
-        nameLabel.text = user?.name
-        // hobbytextViewに受け取ったUserModel型のデータのhobbyを代入
-        hobbytextView.text = user?.hobby
+        // nameLabelに受け取ったデータのnameを代入
+        nameLabel.text = user["name"]
+        // hobbytextViewに受け取ったデータのhobbyを代入
+        hobbyTextView.text = user["hobby"]
     }
 
 }
