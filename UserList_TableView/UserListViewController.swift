@@ -37,7 +37,7 @@ class UserListViewController: UITableViewController {
     
     // セルの数の指定
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 14
+        return members.count
     }
     
     // 表示するセルの情報
